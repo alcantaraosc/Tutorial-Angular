@@ -1,0 +1,16 @@
+<h3>Ejemplo 1 - Comunicacion de Padre a Hijo</h3>
+
+<h3>Componente Padre</h3>
+
+<!--<input (input)="textoPadre=$event.target.value">-->
+<div>
+    <input (input)="input($event.target.value)">    
+</div>
+
+<div>
+    <app-hijo [textoHijo]="textoPadre"  (enviar)="recibirMensaje($event)"></app-hijo>
+</div>
+
+<div>    
+    <span>Mensaje desde el componente hijo {{ textoPadre2 }}</span>
+</div>

@@ -1,0 +1,56 @@
+<!--  
+    disabled: es un atributo de html, pero utilizando el [] es sintaxis de angular
+    [disabled]: es un atributo, 
+    dasactivado: es una propiedad declarada en el componente AttrEventNgmodelComponent de typescript, 
+    el cual le asigna el valor false
+    desde el componente AttrEventNgmodelComponent se modifica el valor de la propiedad "dasactivado" 
+    para pasarlo al html(vista).
+
+-->
+<div class="container mt-2">
+
+    <h1>Tu nombre es: {{titulo}}</h1>
+
+    <div>
+        <button [disabled]="desactivado" class="btn btn-danger">Boton </button>
+    </div>
+
+    <div>        
+        <label for="">clic<input type="checkbox" class="checkbox-light" (click)="OnchangeValue($event)"> </label>
+    </div>
+
+    <div>        
+        <button class="btn btn-primary" (click)="desactivado=!desactivado">desactivar</button>
+    </div>
+
+    <div>
+        <input type="text" [(ngModel)]="titulo" (ngModelChange)="log($event)">    
+    </div>
+
+
+
+
+    <div>
+        <h2>has seleccionado: {{seleccion}}</h2>
+        <select [(ngModel)]="seleccion">
+            <option value="Toyota">Toyota</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Mercedes">Mercedes</option>
+
+        </select>
+    </div>
+
+
+    <div>
+        <h2>has seleccionado: {{seleccion}}</h2>
+        <select (value)="seleccion" (change)="seleccion = $event.target.value">
+            <option value="Toyota">Toyota</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Mercedes">Mercedes</option>
+
+        </select>
+    </div>
+   
+
+</div>
+

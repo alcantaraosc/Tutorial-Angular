@@ -1,0 +1,12 @@
+
+<h1>Mostrar la informacion antes de llamar el Input</h1>
+<div *ngFor="let elemento of lstMessages" >
+    {{elemento}}
+</div>
+<br>
+<br>
+
+<h1>llamar al Input</h1>
+<app-message-input *ngFor="let elemento of lstMessages | async" [texto]="elemento" texto2="enviar" ></app-message-input>
+
+
