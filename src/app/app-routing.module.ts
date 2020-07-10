@@ -9,6 +9,7 @@ import { InterpolacionComponent } from './componentes/interpolacion/interpolacio
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { InputComponent } from './componentes/input/input.component';
 import { MessageInputComponent } from './componentes/message-input/message-input.component';
+import { ListadoComponent } from './componentes/subject-observable-suscriptions/listado/listado.component';
 
 //reglas de ruteo
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'interpolacion', component: InterpolacionComponent },   
   { path: 'Consultar/Clientes', component: UsuariosComponent},   
   { path: 'Llamar-Input', component: InputComponent},
+  { path: 'observable', component: ListadoComponent }
  
 ];
 

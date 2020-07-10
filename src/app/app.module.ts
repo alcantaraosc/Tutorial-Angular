@@ -22,6 +22,9 @@ import { InterpolacionComponent } from './componentes/interpolacion/interpolacio
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { InputComponent } from './componentes/input/input.component';
 import { MessageInputComponent } from './componentes/message-input/message-input.component';
+import { ListadoComponent } from './componentes/subject-observable-suscriptions/listado/listado.component';
+import { ContadorComponent } from './componentes/subject-observable-suscriptions/contador/contador.component';
+import { ListadoService } from './componentes/subject-observable-suscriptions/services/listado.service';
 
 
 
@@ -32,7 +35,7 @@ import { MessageInputComponent } from './componentes/message-input/message-input
     AttrEventNgmodelComponent, LoginComponent, InputoutputComponent, 
     PadreComponent, HijoComponent, UsuariosComponent, PostsComponent, 
     FormComponent, DirectivasComponent, MenuComponent, FooterComponent, 
-    InterpolacionComponent, InicioComponent, InputComponent, MessageInputComponent
+    InterpolacionComponent, InicioComponent, InputComponent, MessageInputComponent, ListadoComponent, ContadorComponent
 
   ],
   imports: [
@@ -43,7 +46,7 @@ import { MessageInputComponent } from './componentes/message-input/message-input
     HttpClientModule,  
     ReactiveFormsModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, ListadoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
