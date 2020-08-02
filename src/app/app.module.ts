@@ -25,6 +25,9 @@ import { MessageInputComponent } from './componentes/message-input/message-input
 import { ListadoComponent } from './componentes/subject-observable-suscriptions/listado/listado.component';
 import { ContadorComponent } from './componentes/subject-observable-suscriptions/contador/contador.component';
 import { ListadoService } from './componentes/subject-observable-suscriptions/services/listado.service';
+import { DataService } from './componentes/usando-evento-observable/services/data.service';
+import { HomeComponent } from './componentes/usando-evento-observable/home/home.component';
+import { HijoCompComponent } from './componentes/usando-evento-observable/hijo-comp/hijo-comp.component';
 
 
 
@@ -35,7 +38,8 @@ import { ListadoService } from './componentes/subject-observable-suscriptions/se
     AttrEventNgmodelComponent, LoginComponent, InputoutputComponent, 
     PadreComponent, HijoComponent, UsuariosComponent, PostsComponent, 
     FormComponent, DirectivasComponent, MenuComponent, FooterComponent, 
-    InterpolacionComponent, InicioComponent, InputComponent, MessageInputComponent, ListadoComponent, ContadorComponent
+    InterpolacionComponent, InicioComponent, InputComponent, MessageInputComponent, ListadoComponent, 
+    ContadorComponent, HomeComponent, HijoCompComponent
 
   ],
   imports: [
@@ -46,7 +50,7 @@ import { ListadoService } from './componentes/subject-observable-suscriptions/se
     HttpClientModule,  
     ReactiveFormsModule
   ],
-  providers: [ApiService, ListadoService],
+  providers: [ApiService, ListadoService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

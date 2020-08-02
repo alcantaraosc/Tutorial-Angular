@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../usando-evento-observable/services/data.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   isAut: boolean=true;
-  constructor() { }
+  mensaje: string = 'Navbar!';
 
-  ngOnInit(): void {    
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(): void {  
+    this.dataService.nombre$.subscribe(texto => {
+      this.mensaje = texto;
+      console.log('navbar: ', texto);
+    });
     
   }
 
